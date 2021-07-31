@@ -1,10 +1,15 @@
 import numpy as np
-from  sklearn.tree import DecisionTreeClassifier
+from sklearn.tree import DecisionTreeClassifier
 import pandas as pd
-Data = "Data/train.csv"
-df = pd.read_csv(Data, sep=',', dtype= 'unicode')
-missing = df.isnull().sum()
-print(missing)
-df.dropna(how='all')
-print(df.info())
+
+
+train_Data = "Data/train.csv"
+train_df = pd.read_csv(train_Data, sep=',', dtype= 'unicode')
+
+print(train_df.shape)
+
+test_Data = "Data/test.csv"
+test_df = pd.read_csv(test_Data, sep=',', dtype = 'unicode')
+
+print(test_df.shape)
 
